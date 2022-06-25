@@ -91,22 +91,22 @@ buttons = [
     ],
     [
         InlineKeyboardButton(text="💞 ᴀʙᴏᴜᴛ ᴍᴇ​​ 💞", callback_data="fallen_"),
-        InlineKeyboardButton(text="Movies bot", url=f"http://t.me/givemefilesbot"),
+        InlineKeyboardButton(text="🙄 sᴏᴜʀᴄᴇ ᴄᴏᴅᴇ 🙄", callback_data="source_"),
     ],
     [
         InlineKeyboardButton(text="💔 sᴜᴘᴘᴏʀᴛ 💔", url=f"https://t.me/{SUPPORT_CHAT}"),
         InlineKeyboardButton(
-            text="🍑 ᴅᴇᴠᴇʟᴏᴘᴇʀ 🍑", url=f"https://t.me/{OWNER_USERNAME}"
+            text="Dev", url=f"https://t.me/{OWNER_USERNAME}"
         ),
     ],
 ]
 
-FallenRobot_IMG = "https://telegra.ph/file/35b87c2ed7f682d1539be.jpg"
+FallenRobot_IMG = "https://te.legra.ph/file/7ef7c89b97360c5f07fd1.jpg"
 
 HELP_STRINGS = f"""
 ғᴀʟʟᴇɴ ✘ ʀᴏʙᴏᴛ *ᴇxᴄʟᴜsɪᴠᴇ ꜰᴇᴀᴛᴜʀᴇs*\n*» ᴄʜᴇᴄᴋᴏᴜᴛ ᴀʟʟ ᴛʜᴇ ᴄᴏᴍᴍᴀɴᴅs*\n*» ᴀʟʟ ᴏꜰ ᴍʏ ᴄᴏᴍᴍᴀɴᴅs ᴄᴀɴ ʙᴇ ᴜsᴇᴅ ᴡɪᴛʜ / ᴏʀ !*\n*» ɪꜰ ʏᴏᴜ ɢᴏᴛ ᴀɴʏ ɪssᴜᴇ ᴏʀ ʙᴜɢ ɪɴ ᴀɴʏ ᴄᴏᴍᴍᴀɴᴅ ᴘʟᴇᴀsᴇ ʀᴇᴘᴏʀᴛ ɪᴛ ᴛᴏ @{SUPPORT_CHAT}*\n\n*ㅤㅤㅤㅤㅤㅤ» ᴍᴀɪɴ ᴄᴏᴍᴍᴀɴᴅꜱ «*\n\n➲ /start : *ꜱᴛᴀʀᴛꜱ ᴍᴇ | ᴀᴄᴄᴏʀᴅɪɴɢ ᴛᴏ ᴍᴇ ʏᴏᴜ'ᴠᴇ ᴀʟʀᴇᴀᴅʏ ᴅᴏɴᴇ ɪᴛ​.*\n➲ /donate : *sᴜᴘᴘᴏʀᴛ ᴍᴇ ʙʏ ᴅᴏɴᴀᴛɪɴɢ ꜰᴏʀ ᴍʏ ʜᴀʀᴅᴡᴏʀᴋ​.*\n➲ /help  : *ᴀᴠᴀɪʟᴀʙʟᴇ ᴄᴏᴍᴍᴀɴᴅꜱ ꜱᴇᴄᴛɪᴏɴ.*\n*  ‣ ɪɴ ᴘᴍ : ᴡɪʟʟ ꜱᴇɴᴅ ʏᴏᴜ ʜᴇʟᴘ​ ꜰᴏʀ ᴀʟʟ ꜱᴜᴘᴘᴏʀᴛᴇᴅ ᴍᴏᴅᴜʟᴇꜱ.*\n*  ‣ ɪɴ ɢʀᴏᴜᴘ : ᴡɪʟʟ ʀᴇᴅɪʀᴇᴄᴛ ʏᴏᴜ ᴛᴏ ᴘᴍ, ᴡɪᴛʜ ᴀʟʟ ᴛʜᴀᴛ ʜᴇʟᴘ​ ᴍᴏᴅᴜʟᴇꜱ.*"""
 
-DONATE_STRING = """[𝝙𝗡𝗢𝗡𝗬𝗠𝗢𝗨𝗦](https://t.me/anonymous_was_bot)"""
+DONATE_STRING = """[Bebop](https://t.me/GINSAAAN)"""
 
 IMPORTED = {}
 MIGRATEABLE = []
@@ -375,7 +375,11 @@ def Fallen_about_callback(update: Update, context: CallbackContext):
                     ],
                     [
                         InlineKeyboardButton(
-                            text="Father", url=f"https://t.me/GINSAAAN"
+                            text="ᴅᴇᴠᴇʟᴏᴩᴇʀ", url=f"https://t.me/{OWNER_USERNAME}"
+                        ),
+                        InlineKeyboardButton(
+                            text="Network",
+                            url="https://t.me/Karasuno_Network",
                         ),
                     ],
                     [
@@ -401,7 +405,10 @@ def Fallen_about_callback(update: Update, context: CallbackContext):
                     ],
                     [
                         InlineKeyboardButton(
-                            text="Father", url="https://t.me/GINSAAAN"
+                            text="ᴅᴇᴠᴇʟᴏᴩᴇʀ", url="https://t.me/GINSAAAN"
+                        ),
+                        InlineKeyboardButton(
+                            text="Network", url="https://t.me/Karasuno_Network"
                         ),
                     ],
                     [
@@ -418,6 +425,29 @@ def Fallen_about_callback(update: Update, context: CallbackContext):
             timeout=60,
             disable_web_page_preview=False,
         )
+
+
+@run_async
+def Source_about_callback(update: Update, context: CallbackContext):
+    query = update.callback_query
+    if query.data == "source_":
+        query.message.edit_text(
+            text="""*ʜᴇʏ,*\n\n*ᴛʜɪs ɪs ғᴀʟʟᴇɴ ✘ ʀᴏʙᴏᴛ*\n\n*This bot is only for my fiction rec group of :* [bot](http://t.me/givemefilesbot)\n\n*ᴍʏ sᴏᴜʀᴄᴇ ᴄᴏᴅᴇ ɪs ɪɴ ᴅᴇᴠᴇʟᴏᴘᴍᴇɴᴛ ᴀɴᴅ ɴᴏᴛ ᴄᴏᴍᴘʟᴇᴛᴇᴅ ʏᴇᴛ*\n*sᴏ ɪғ ʏᴏᴜ ғᴏᴜɴᴅ ᴀɴʏ ʙᴜɢ ᴏʀ ɪғ ʏᴏᴜ ᴡᴀɴɴᴀ ʀᴇǫᴜᴇsᴛ ᴀɴʏ ғᴇᴀᴛᴜʀᴇ, ᴩʟᴇᴀsᴇ ʟᴇᴛ ᴜs ᴋɴᴏᴡ ᴀᴛ* [Fiction - recs](https://t.me/fictiontvgroup) *ᴏʀ ʏᴏᴜ ᴄᴀɴ ᴄᴏɴᴛᴀᴄᴛ ᴍʏ ᴅᴇᴠᴇʟᴏᴩᴇʀ :* [Bebop](https://t.me/GINSAAAN)""",
+            parse_mode=ParseMode.MARKDOWN,
+            disable_web_page_preview=True,
+            reply_markup=InlineKeyboardMarkup(
+                [[InlineKeyboardButton(text="◁", callback_data="source_back")]]
+            ),
+        )
+    elif query.data == "source_back":
+        query.message.edit_text(
+            PM_START_TEXT.format(dispatcher.bot.first_name),
+            reply_markup=InlineKeyboardMarkup(buttons),
+            parse_mode=ParseMode.MARKDOWN,
+            timeout=60,
+            disable_web_page_preview=False,
+        )
+
 
 @run_async
 def get_help(update: Update, context: CallbackContext):
@@ -704,8 +734,8 @@ def main():
         try:
             dispatcher.bot.send_photo(
                 f"@{SUPPORT_CHAT}",
-                "https://te.legra.ph/file/c5b012cc52f56fde5f481.jpg",
-                caption="Bebob's Bot ɪs ᴀʟɪᴠᴇ !\n\nᴍᴀᴅᴇ ᴡɪᴛʜ 𝖇𝖊𝖇𝖔𝖕 ... 𓆩Ｂᴀᴊʀᴀɴɢ༂Ｄᴀʟ� 『Kᴀʀᴀsᴜɴᴏ』",
+                "https://telegra.ph/file/36be820a8775f0bfc773e.jpg",
+                caption="Bebob's ɪs ᴀʟɪᴠᴇ !\n\nᴍᴀᴅᴇ by 𝖇𝖊𝖇𝖔𝖕 ... 𓆩Ｂᴀᴊʀᴀɴɢ༂Ｄᴀʟ� 『Kᴀʀᴀsᴜɴᴏ』",
             )
         except Unauthorized:
             LOGGER.warning(
