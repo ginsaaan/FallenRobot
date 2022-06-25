@@ -1,13 +1,13 @@
-from typing import Optional
+import re
+import time
 
-from telegram import Message, Update, Bot, User
-from telegram import MessageEntity
-from telegram.ext import Filters, MessageHandler, run_async
+from pyrogram import filters
+from pyrogram.types import Message
 
-from tg_bot import dispatcher
-from tg_bot.modules.disable import DisableAbleCommandHandler, DisableAbleRegexHandler
-from tg_bot.modules.sql import afk_sql as sql
-from tg_bot.modules.users import get_user_id
+from FallenRobot import pbot
+from FallenRobot.helper_extra.afk_mongo import add_afk, is_afk, remove_afk
+from FallenRobot.__main__ import get_readable_time
+
 
 AFK_GROUP = 7
 AFK_REPLY_GROUP = 8
